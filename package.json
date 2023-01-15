@@ -9,7 +9,8 @@
     "seed": "knex seed:run",
     "seed:users": "knex seed:run --specific=create_users.js",
     "seed:posts": "knex seed:run --specific=create_posts.js",
-    "prepare": "yarn install && yarn --cwd client install --ignore-engines && yarn --cwd client build"
+    "install:client":"yarn --cwd client install --ignore-engines",
+    "build:client":"yarn --cwd client build"
   },
   "keywords": [],
   "author": "",
