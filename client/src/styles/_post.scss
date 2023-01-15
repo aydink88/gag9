@@ -1,0 +1,70 @@
+.post-page {
+  justify-content: flex-start;
+}
+
+.swipe-bar {
+  position: relative;
+  background-color: #08f;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+
+  & .close {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & .arrow {
+    font-size: 2.5rem;
+  }
+}
+
+.post-options {
+  position: fixed;
+  background-color: #0088ff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 99vw;
+  max-height: 50vh;
+  bottom: 0vh;
+  font-size: 2rem;
+  border-radius: 10px 10px 0 0;
+  padding: 2rem;
+
+  &__item {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    & > * {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.post-options-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.post-options-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.post-options-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.post-options-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 400ms, transform 400ms;
+}

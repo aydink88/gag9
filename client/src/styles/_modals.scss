@@ -1,0 +1,48 @@
+.modal {
+  position: absolute;
+  background-color: #ccc;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  font-size: 2rem;
+  width: 400px;
+  max-width: 90vw;
+
+  & > * {
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.5) translate(-50%, -50%);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1) translate(-50%, -50%);
+  transition: all 400ms;
+}
+.modal-exit {
+  opacity: 1;
+  transform: scale(1) translate(-50%, -50%);
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.5) translate(-50%, -50%);
+  transition: all 400ms;
+}

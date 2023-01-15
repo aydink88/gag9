@@ -1,0 +1,51 @@
+.sidenav {
+  position: fixed;
+  color: #000;
+  background-color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
+  z-index: 3;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+
+  ul {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #ccc;
+      margin: 0.5rem 1rem;
+    }
+
+    li a {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      i {
+        padding: 8px 0 8px 64px;
+        flex-grow: 1;
+      }
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.2);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &.open {
+    transform: translateX(0%);
+  }
+}

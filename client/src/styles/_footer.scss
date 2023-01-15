@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  width: auto;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  transform: translateX(-50%);
+
+  &__btn {
+    background-color: #ffcc00;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    width: auto;
+    color: #000;
+    margin: 16px auto;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+
+    & > * {
+      margin-right: 1.2rem;
+      color: inherit;
+      white-space: nowrap;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+    }
+  }
+}

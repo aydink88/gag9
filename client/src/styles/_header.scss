@@ -1,0 +1,108 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  transition: top 0.7s;
+
+  &.hide {
+    top: -100%;
+  }
+
+  &__navbar {
+    margin: 1rem;
+    color: #999;
+    display: flex;
+    height: 3rem;
+    background-color: #fff;
+    align-items: center;
+
+    & > * > * {
+      margin: auto 0.8rem;
+    }
+
+    &--left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: auto;
+    }
+
+    &--right {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__nav-avatar {
+    width: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+.tabbar {
+  height: 4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+
+  & a {
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  & a.active {
+    color: #000;
+    box-shadow: inset 0 -2px 0 #000;
+  }
+}
+
+.featured-tags {
+  display: flex;
+  height: 7rem;
+  padding: 1.4rem 1.2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  scrollbar-color: blue;
+
+  & a {
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0.1rem 1rem;
+    text-align: center;
+  }
+}
+
+.usermenu {
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50vh;
+  max-height: 100%;
+  display: none;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-radius: 10px;
+
+  &.show {
+    display: block;
+  }
+}

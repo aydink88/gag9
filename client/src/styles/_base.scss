@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: system, -apple-system, Roboto, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+
+  color: #999;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  color: #fff;
+  background-color: #000;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.inverse {
+  background-color: transparent;
+  color: #000;
+}
+
+.outline {
+  background-color: #fff;
+  color: #000;
+}
+
+.form-control {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 90%;
+
+  // & > * {
+  //   margin-right: 2rem;
+  //   margin-left: auto;
+  // }
+}
+
+input {
+  appearance: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin: 2rem;
+}
